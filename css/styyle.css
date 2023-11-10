@@ -1,0 +1,319 @@
+:root {
+    --color-primary: hsl(266, 89%, 14%);
+    --color-secundary: #200445;
+    --bg: #223;
+    --text: #222;
+}
+
+.dark {
+    background-color: #200445;
+    color: rgb(190, 235, 235);
+}
+
+.img{
+max-width: 100%;
+height: auto;
+}
+
+.font-cursive {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+span {
+    font-style: italic;
+}
+
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+::before {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+/* Estilo base */
+.container {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 40px 0 20px;
+}
+
+.section__title {
+    padding-left: 20px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.header i {
+    font-size: 28px;
+    color: aliceblue;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 700;
+    color: #8a2be2;
+}
+
+.header__nav {
+    padding: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__list {
+    display: flex;
+    gap: 45px;
+    color: aliceblue;
+    text-decoration: wavy;
+}
+
+/* Estilos para dispositivos de menos de 500px */
+@media (max-width: 500px) {
+    .header__menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 75%;
+        height: 100vh;
+        padding: 20px;
+        background-color: var(--color-primary);
+        box-shadow: -7px 1px 42px 1px #0000005e;
+        transition: left .3s ease-in-out;
+    }
+
+    .menu__list {
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .list__link {
+        color: blanchedalmond;
+        font-size: 24px;
+        font-weight: 700px;
+        text-transform: capitalize;
+    }
+
+    .btn--close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .show--menu {
+        left: 0;
+    }
+
+    .project__img {
+        height: 300px;
+        width: 300px;
+        object-position: center;
+        transform: scale(1);
+        transition: transform .3s ease-in-out;
+        padding: 20px;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    .proyectos__card {
+        max-width: 350px;
+        background-color: var(--color-secundary);
+    }
+
+    .body__projects h2 {
+        padding: 20px;
+        margin-top: 0;
+    }
+}
+
+/* Estilos para el hero */
+.hero {
+    padding-top: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .container {
+    width: 100%;
+    border: none;
+    text-align: left;
+    background-color: var(--color-primary);
+    padding: 0;
+}
+
+.hero__img {
+    position: relative;
+    margin-bottom: 2px;
+    width: 250px;
+    height: 300px;
+    border: 3px solid;
+    border-radius: 3px 3px 40px 3px;
+    overflow: hidden;
+    box-shadow: 3px 4px 0 2px rgb(73, 12, 73);
+}
+
+.hero__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+}
+
+.hero__img:hover img {
+    transform: scale(1.1);
+}
+
+.hero__tag {
+    opacity: .5;
+}
+
+.hero__btn {
+    padding: 12px 18px;
+    font-size: 12px;
+    border-radius: 8px 4px 15px 8px;
+    background-color: rgb(73, 12, 73);
+}
+
+/* Estilos para habilidades */
+.habilidades {
+    background-color: #b7aeae;
+}
+
+.section__habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fi, minmax(150px, 1fr));
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+/* Estilos para portafolio */
+.portafolio__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.portafolio__img--content {
+    width: 100%;
+    height: auto;
+    border-radius: 3px 3px 30px 3px;
+    overflow: hidden;
+}
+
+.portafolio__img--content img {
+    height: 200px;
+    width: 150px;
+    object-position: center;
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+    background-color: seashell;
+    padding: 20px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.portafolio__item:hover img{
+    transform: scale(1.1);
+}
+
+/* Estilos para formulario de contacto */
+.contact__btn {
+    padding: 12px 18px;
+    font-size: 12px;
+    border-radius: 8px 4px 15px 8px;
+    background-color: rgb(73, 12, 73);
+}
+
+.label__input {
+    background-color: #dfdfdf;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    border-radius: 3px 3px 3px 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #200445;
+}
+
+.label__input input {
+    background-color: #dfdfdf;
+    border: none;
+    outline: none;
+    width: 25%;
+    padding: 5px;
+}
+
+.contact__form textarea {
+    background-color: #dfdfdf;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    border-radius: 3px 3px 3px 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    resize: none;
+}
+
+/* Estilos para dispositivos de más de 768px */
+@media (min-width: 768px) {
+    .proyectos__card{
+        max-width: 750px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .container .card :nth-child(even){
+        flex-direction: row-reverse;
+    }
+    .project__img{
+        width: 50%;
+    }
+    .body__projects{
+        width: 50%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
