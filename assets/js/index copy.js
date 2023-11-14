@@ -119,7 +119,7 @@ console.dir(document)
 //     console.log('nodo:', node)
 //   }
 // }
-
+//lo anterior no es tan indispensable es para saber que se puede recorrer por los nodos elementos
 // console.log('nodos de elemento:')
 // hijos
 // firstElementChild - primer nodo hijo
@@ -140,7 +140,7 @@ console.dir(document)
 // console.log('Métodos de búsqueda:')
 
 // document.getElementById - devuelve un elemento por su id
-// console.log(document.getElementById('btnOpen'))
+// console.log(document.getElemesntById('btnOpen'))
 
 // document.querySelector(selecor o selectores) - devuelve el primer elemento que coincida con el selector
 
@@ -183,7 +183,7 @@ const btnOpen = document.getElementById('btnOpen')
 
 // Esto esta mal
 // btnOpen.onclick = saludar()
-
+// la 3 se ocupa y es una mejor practica nojunior
 // 3. Método addEventListener
 // funcion manejadora de eventos (event handler)
 document.addEventListener('click', function (event) {
@@ -197,7 +197,7 @@ document.addEventListener('click', function (event) {
   }
 
   // matches - devuelve true si el elemento cumple con el selector dado
-
+// para esto debes darle el id logo al target del logo
   if (event.target.matches('#logo')) {
     console.log('fue el logo')
   }

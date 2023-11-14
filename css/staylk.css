@@ -45,9 +45,9 @@ a {
 }
 
 button {
-  background:  rgb(73, 12, 73);
+  background: var(--color-secondary);
   border: none;
-  color: #835757;
+  color: seashell;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,24 +136,24 @@ main {
 .header__logo {
   font-size: 30px;
   font-weight: 700;
-  color: slateblue;
+  color: #c500d6;
 }
 
 .list {
   display: flex;
+  flex-direction: column;
 }
 
 .list__link {
   color: #fff;
   font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
-
-/* .list__link.active {
-  color: var(--color-primay);
-} */
+.list__link .active {
+  color: lightseagreen;
+}
 
 @media (max-width: 768px) {
   .header__menu {
@@ -241,30 +241,30 @@ main {
 
 /* Portfolio */
 .portafolio {
-  background-color: #00000008;
+  background-color: #be161608;
 }
 
 .portafolio__content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: auto;
   gap: 40px;
 }
 
 .portafolio__item {
-  background-color: #fff;
+  background-color: #3f3f3f;
   border-radius: 3px 3px 30px 3px;
 }
 
-.portafolio__img-content {
-  width: 50%;
+.portafolio__img--content {
+  width: 100%;
   height: auto;
   border-radius: 3px 3px 30px 3px;
   overflow: hidden;
 }
 
-.portafolio__img-content img {
-  width: 50%;
+.portafolio__img--content img {
+  width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center;
@@ -281,10 +281,10 @@ main {
   padding: 20px;
 }
 
-/* .portafolio__name {
+.portafolio__title {
   font-size: 24px;
   margin: 0;
-} */
+}
 
 /* Reviews */
 /* .reviews {
@@ -398,7 +398,7 @@ main {
   width: 0%;
   height: 3px;
   background-color: var(--color-primay);
-  z-index: 101;
+  z-index: 105;
 }
 
 /* Tablets */
@@ -420,6 +420,8 @@ main {
   }
 
   .list {
+    display: flex;
+    flex-direction: row;
     gap: 30px;
   }
 
@@ -455,6 +457,10 @@ main {
 
   .hero__img {
     flex-shrink: 0;
+  }
+  .list{
+    display: flex;
+    flex-direction: row;
   }
 }
 
